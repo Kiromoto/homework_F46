@@ -9,3 +9,7 @@ https://proproprogs.ru/django/osnovy-orm-django-za-chas
 Пишем приложение с бэкендом на Django и фронтендом на React:
 https://tproger.ru/translations/django-react-webapp/
 
+Как серверу на Django знать своих клиентов на React в лицо, практическое руководство
+https://habr.com/ru/articles/512746/
+
+

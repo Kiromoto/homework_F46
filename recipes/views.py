@@ -1,6 +1,9 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from rest_framework import generics
 from .models import Dish
+from .serializers import DishSerializer
+
+from django.views.generic import ListView
+
 
 class DishList(ListView):
     model = Dish
@@ -9,3 +12,7 @@ class DishList(ListView):
     context_object_name = 'dishs'
     # paginate_by = 6
 
+
+class DishListCreate(generics.ListCreateAPIView):
+    queryset = Dish.objects.all()
+    serializer_class = DishSerializer
