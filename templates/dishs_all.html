@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Все рецепты</title>
+    {% load static %}
+</head>
+<body style="display: flex; flex-direction: column">
+
+    {% for dish in dishs %}
+        <div>
+            <h5>{{ dish.category }}</h5>
+            <h3>{{ dish.title }}</h3>
+            <div> {{ dish.text }} </div>
+            <p>{{ dish.datetime.date }}</p>
+            <img src="{{ dish.picture.url }}" alt="Фото блюда">
+        </div>
+    {% endfor %}
+
+
+</body>
+</html>
