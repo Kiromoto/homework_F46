@@ -11,5 +11,7 @@ https://tproger.ru/translations/django-react-webapp/
 
 Как серверу на Django знать своих клиентов на React в лицо, практическое руководство
 https://habr.com/ru/articles/512746/
+https://www.valentinog.com/blog/drf/
 
 
+https://www.digitalocean.com/community/tutorials/how-to-build-a-modern-web-application-to-manage-customer-information-with-django-and-react-on-ubuntu-18-04-ru
