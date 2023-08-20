@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
 
 # Application definition
 
@@ -135,6 +135,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 
+print(f'STATICFILES_DIRS  BASE_DIR {BASE_DIR}')
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -156,6 +158,8 @@ REST_FRAMEWORK = {
 
 }
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ('https://localhost:3000',)
-
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     # 'https://localhost:3000',
+#     'https://localhost:3000/',
+#     )
