@@ -1,14 +1,18 @@
-from rest_framework import generics
+from rest_framework.generics import ListCreateAPIView, ListAPIView, RetrieveAPIView
 from .models import Dish, Category
 from .serializers import DishSerializer, CategorySerializer
 from django.views.generic import ListView
 
 
-class DishListCreate(generics.ListCreateAPIView):
+class DishListCreate(ListCreateAPIView):
     queryset = Dish.objects.all()
     serializer_class = DishSerializer
 
 
-class CategoryListView(generics.ListAPIView):
+class CategoryListView(ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+class SingleDishView(RetrieveAPIView):
+    queryset = Dish.objects.all()
+    serializer_class = DishSerializer

@@ -163,3 +163,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     # 'https://localhost:3000',
 #     'https://localhost:3000/',
 #     )
+
+URL = 'http://127.0.0.1:8000/'

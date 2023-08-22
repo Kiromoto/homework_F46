@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
+from django.conf import settings
 
 
 class Category(models.Model):
@@ -28,4 +29,6 @@ class Dish(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('dish_detail', args=[str(self.id)])
+        return settings.URL+'api/dishs/' + str(self.id)
+    #     # return reverse('dish_detail', args=[str(self.id)])
+
