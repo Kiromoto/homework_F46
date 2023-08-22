@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+from rest_framework.schemas import get_schema_view
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -44,6 +45,9 @@ urlpatterns = [
     path('', include('recipes.urls')),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('openapi', get_schema_view(title="Site dishes", description="API for site dishes"), name='openapi-schema'),
+    # path('swagger-ui/', TemplateView.as_view(template_name='swagger-ui.html', extra_context={'schema_url': 'openapi-schema'}), name='swagger-ui'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

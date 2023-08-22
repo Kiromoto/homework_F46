@@ -158,10 +158,7 @@ REST_FRAMEWORK = {
 
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = (
-#     # 'https://localhost:3000',
-#     'https://localhost:3000/',
-#     )
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = ["https://localhost:3000", 'http://localhost:3000', ]
 
 URL = 'http://127.0.0.1:8000/'
