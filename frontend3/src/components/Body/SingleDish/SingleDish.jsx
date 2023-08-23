@@ -29,13 +29,15 @@ export default function SingleDish(props) {
 
     const date = new Date(singleDish.datetime).toLocaleString('ru', {day: 'numeric', month: 'numeric', year: 'numeric'});
     return (
-        <div key={params.id} className={"oneDishCard"}>
-            <>{singleDish[0]}</>
-            <h1>Название: {singleDish.title}</h1>
-            <h3>Категория: {singleDish.category} - {singleDish.category_name} </h3>
-            <img src={singleDish.picture} alt='Фото блюда'></img>
-            <p> {singleDish.text} </p>
-            <p>Опубликовано: {date} </p>
+        <div key={params.id} className={"oneDish"}>
+            <div className="dishTitle">{singleDish.title}</div>
+            <div><img src={singleDish.picture} alt='Фото блюда'></img></div>
+
+            <div className="dishText">{singleDish.text}</div>
+            <div className="dishConteiner">
+                <div className="dishCategory">{singleDish.category_name} {singleDish.category}</div>
+                <div className="dishDate">Опубликовано: {date}</div>
+            </div>
         </div>
     )
 }

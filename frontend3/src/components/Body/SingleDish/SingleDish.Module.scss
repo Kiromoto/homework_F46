@@ -1,0 +1,40 @@
+.oneDish {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 200px 50px 50px;
+}
+
+.dishTitle {
+  font-size: 50px;
+  margin: 10px 0 10px 0;
+}
+
+.dishText {
+  margin: 10px 0 10px 0;
+  font-size: 22px;
+  text-align: justify;
+}
+
+.dishConteiner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .dishCategory {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    text-align: left;
+  }
+
+  .dishDate {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+    justify-self: end;
+  }
+}
+
+
+

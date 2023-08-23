@@ -1,25 +1,31 @@
 import './App.Module.scss';
-import DishesList from './components/DishesList'
-import CategoryList from "./components/CategoryList/CategoryList";
-import {Route, Routes, Link} from 'react-router-dom'
-import SingleDish from "./components/SingleDish/SingleDish";
+import HeaderInfo from "./components/Header/HeaderInfo/HeaderInfo";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Footer from "./components/Footer/Footer";
+
+import DishesList from './components/Body/DishesList/DishesList'
+import CategoryList from "./components/Sidebar/CategoryList/CategoryList";
+import {Route, Routes } from 'react-router-dom'
+import SingleDish from "./components/Body/SingleDish/SingleDish";
+
+
 
 
 function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <nav className="navbar">
-                    <Link to="/">Все рецепты</Link>
-                    <Link to="/category">Категории</Link>
-                </nav>
-                <Routes>
-
-                    <Route path="/dishes/:id" element={<SingleDish/>} />
-                    <Route path="/category" element={<CategoryList/>} />
-                    <Route path="/" element={<DishesList/>} />
-                </Routes>
+                <HeaderInfo/>
             </header>
+            <body className="App-body">
+                <Sidebar/>
+                <Routes>
+                    <Route path="/dishes/:id" element={<SingleDish/>}/>
+                    <Route path="/category" element={<CategoryList/>}/>
+                    <Route path="/" element={<DishesList/>}/>
+                </Routes>
+            </body>
+            <Footer/>
         </div>
     );
 }
