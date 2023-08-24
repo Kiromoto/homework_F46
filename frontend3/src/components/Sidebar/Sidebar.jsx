@@ -25,7 +25,7 @@ export default function Sidebar() {
 
     return (
         <aside>
-            <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{width: "300px"}}>
+            <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{width: "300px", height: ("100% - 50px"), margin: "50px 0 0 0"}}>
                 <div>
                     <ul className="nav nav-pills flex-column mb-auto">
                         <li className="nav-item">
