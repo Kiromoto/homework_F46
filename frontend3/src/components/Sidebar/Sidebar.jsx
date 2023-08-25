@@ -25,32 +25,17 @@ export default function Sidebar() {
 
     return (
         <aside>
-            <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{width: "300px", height: ("100% - 50px"), margin: "50px 0 0 0"}}>
+            <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{width: "250px", height: ("100% - 50px"), margin: "50px 0 0 0"}}>
                 <div>
                     <ul className="nav nav-pills flex-column mb-auto">
                         <li className="nav-item">
-                            <a href="/" className="nav-link text-white" aria-current="page">Все категории</a>
+                            <a href="/" className="nav-link text-white" id="allCategoryOneLink" aria-current="page">Все категории</a>
                         </li>
-                        <li>
-                            <a href="#" className="nav-link text-white">
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="nav-link text-white">
-                                Orders
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="nav-link text-white">
-                                Products
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="nav-link text-white">
-                                Customers
-                            </a>
-                        </li>
+                        {categories.map((category) =>
+                            <li key={category.id}>
+                                <a href={`/category/${category.id}`} id="categoryOneLink" className="nav-link text-white" style={{}}>{category.name}</a>
+                            </li>
+                        )}
                     </ul>
                     <hr></hr>
                 </div>

@@ -28,13 +28,16 @@ export default function DishesList() {
 
     return (
         <div>
-            <h1>Список блюд</h1>
-            <h3> Количество рецептов: {dishDate.length} </h3>
-            {dishDate.map((dish) =>
-                <div>
-                    <DishCard key={dish.id} one_dish={dish}/>
+            <div className="album py-5" style={{margin: "0 10px 0 10px"}}>
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    {dishDate.map((dish) =>
+                        <div className="col">
+                            <DishCard key={dish.id} one_dish={dish}/>
+                        </div>
+                    )}
                 </div>
-            )}
+            </div>
+
         </div>
     )
 }

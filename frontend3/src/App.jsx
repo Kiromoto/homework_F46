@@ -7,6 +7,7 @@ import DishesList from './components/Body/DishesList/DishesList'
 import CategoryList from "./components/Sidebar/CategoryList/CategoryList";
 import {Route, Routes } from 'react-router-dom'
 import SingleDish from "./components/Body/SingleDish/SingleDish";
+import SingleCategory from "./components/Body/SingleCategory/SingleCategory"
 
 
 
@@ -21,6 +22,7 @@ function App() {
                 <Sidebar/>
                 <Routes>
                     <Route path="/dishes/:id" element={<SingleDish/>}/>
+                    <Route path="/category/:id" element={<SingleCategory/>}/>
                     <Route path="/category" element={<CategoryList/>}/>
                     <Route path="/" element={<DishesList/>}/>
                 </Routes>
