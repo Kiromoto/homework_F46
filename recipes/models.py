@@ -12,7 +12,7 @@ class Category(models.Model):
 
 
 class Dish(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.SET_DEFAULT, default='Другое', )
+    category = models.ForeignKey(Category, related_name='dishes', on_delete=models.SET_DEFAULT, default='Другое', )
     title = models.CharField(max_length=128)
     text = models.TextField()
     datetime = models.DateTimeField(auto_now_add=True)

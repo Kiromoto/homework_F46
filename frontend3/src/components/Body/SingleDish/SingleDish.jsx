@@ -4,7 +4,7 @@ import {useParams} from "react-router-dom";
 import axios from 'axios';
 
 
-let API_URL = 'http://localhost:8000/api/dishs/';
+let API_URL = 'http://localhost:8000/api/dishes/';
 
 export default function SingleDish(props) {
     const params = useParams()
@@ -35,7 +35,7 @@ export default function SingleDish(props) {
 
             <div className="dishText">{singleDish.text}</div>
             <div className="dishConteiner">
-                <div className="dishCategory">{singleDish.category_name} {singleDish.category}</div>
+                <div className="dishCategory">{singleDish.category_name}</div>
                 <div className="dishDate">Опубликовано: {date}</div>
             </div>
         </div>

@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'corsheaders',
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
 
     'recipes.apps.RecipesConfig',
 
@@ -156,9 +158,22 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ),
 
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
 }
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = ["https://localhost:3000", 'http://localhost:3000', ]
 
 URL = 'http://127.0.0.1:8000/'
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Dishes site API',
+    'DESCRIPTION': 'Website with delicious recipes',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+
+    'SWAGGER_UI_DIST': 'SIDECAR',  # shorthand to use the sidecar instead
+    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
+    'REDOC_DIST': 'SIDECAR',
+}

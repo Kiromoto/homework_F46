@@ -4,7 +4,7 @@ import './DishesList.Module.scss'
 import axios from 'axios';
 
 
-const API_URL = 'http://localhost:8000/api/dishs/';
+const API_URL = 'http://localhost:8000/api/dishes/';
 
 export default function DishesList() {
     const [dishDate, setDishDate] = useState([]);
@@ -37,7 +37,6 @@ export default function DishesList() {
                     )}
                 </div>
             </div>
-
         </div>
     )
 }

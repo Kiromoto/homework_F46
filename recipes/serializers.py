@@ -14,6 +14,7 @@ class DishSerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    dishes = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model = Category
-        fields = ('id', 'name',)
+        fields = ('id', 'name', 'dishes',)
